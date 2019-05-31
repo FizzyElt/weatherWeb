@@ -1,23 +1,33 @@
 import Vue from "vue";
 import Router from "vue-router";
 // import { isFunction } from 'util';
-import Home from "./views/Home.vue";
-import about from "./views/About.vue"
+import weather from "./views/weather.vue";
+import time from "./components/time.vue"
+import AQI from "./views/AQI.vue"
+import chart from "./views/chart.vue"
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "home"
+      redirect: "/weather/time1"
     },
     {
-      path: "/home",
-      component: Home,
+      path: "/weather",
+      component: weather,
       children: [
         {
-          path: "about",
-          component: about
+          path: "time1",
+          component: time,
+        },
+        {
+          path: "time2",
+          component: time
+        },
+        {
+          path: "time3",
+          component: time
         }
       ]
     },
@@ -31,8 +41,16 @@ export default new Router({
     //     import(/* webpackChunkName: "about" */ "./views/About.vue")
     // },
     {
+      path:"/AQI",
+      component:AQI
+    },
+    {
+      path:"/chart",
+      component:chart
+    },
+    {
       path: "/*",
-      redirect: "/home"
+      redirect: "/weather/time1"
     }
   ]
 });
