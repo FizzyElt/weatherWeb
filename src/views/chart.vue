@@ -207,10 +207,8 @@ export default {
     button{
         width: 300px;
         font-size: 21px;
-
         border:none;
         border-bottom: 2px solid rgb(158, 158, 158);
-        
     }
     .RenderBtn{
         height: 50px;
