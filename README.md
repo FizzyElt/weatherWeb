@@ -1,5 +1,11 @@
 # vue-web-text
 
+氣象與空氣品質指標
+chart.js使用
+
+## Demo
+https://fizzyelt.github.io/weatherWeb/build/dist/
+
 ## Project setup
 ```
 npm install
